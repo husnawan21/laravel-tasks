@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ContactController;
@@ -28,8 +29,6 @@ Route::get('/welcome', function () {
 
 Route::get('/', fn () => view('home'));
 
-Route::get('contact', fn () => view('contact'));
-
 // Route::get('profile', function (Request $request) {
 //   $name = $request->name;
 //   return view('profile', ['name' => $name]);
@@ -39,6 +38,8 @@ Route::get('/', HomeController::class);
 
 Route::get('contact', [ContactController::class, 'create']);
 Route::post('contact', [ContactController::class, 'store']);
+
+Route::get('about', [AboutController::class, '__invoke']);
 
 Route::get('profile/{identifier}', [ProfileInformationController::class, 'index']);
 
