@@ -9,7 +9,7 @@
   @vite('resources/css/app.css')
 </head>
 
-<body data-theme="bumblebee" class="min-h-screen bg-base-300">
+<body data-theme="lemonade" class="min-h-screen bg-base-300">
   <x-navbar></x-navbar>
 
   {{ $slot }}

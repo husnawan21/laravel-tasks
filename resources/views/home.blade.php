@@ -1,8 +1,8 @@
 <x-app-layout title="Home Page">
-  <div class="bg-gradient-to-b from-primary to-base-300">
-    <article class="prose mx-auto px-5 pb-12 pt-20">
-      <div class="hero pt-12">
-        <div class="hero-content text-center">
+  <div class="bg-gradient-to-b from-primary/50 to-base-300">
+    <article class="px-5 pt-20 pb-12 mx-auto prose">
+      <div class="pt-12 hero">
+        <div class="text-center hero-content">
           <div class="max-w-md">
             <h1 class="text-5xl font-bold">Hello there</h1>
             @if (session()->has('success'))
